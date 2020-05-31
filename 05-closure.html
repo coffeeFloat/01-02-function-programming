@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>closure</title>
+  <script>
+    function makeSalary(basic) {
+      return function (performance) {
+        return basic + performance;
+      }
+    }
+
+    const salaryLevel1 = makeSalary(12000);
+    const salaryLevel2 = makeSalary(15000);
+
+    console.log(salaryLevel1(2000));
+    console.log(salaryLevel2(3000));
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
